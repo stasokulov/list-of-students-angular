@@ -1,1 +1,47 @@
+<!DOCTYPE HTML>
+<html ng-app="studentsApp">
 
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body ng-controller="studentsCtrl">
+    <div class="wrap">
+
+      <header>
+        Ученики
+      </header>
+
+      <input class="form-control" ng-model="name" placeholder="Имя" />
+      <input class="form-control" ng-model="surName" placeholder="Фамилия" />
+      <input class="form-control" ng-model="avatar" placeholder="Ссылка на фото" />
+      <br>
+      <button id='butGetStudens' ng-click="addStudents(name, surName, avatar, character, fail, success, features)">Добавить</button>
+      <button ng-click="reloadStudents()">Перезагрузить</button>
+
+      <div class="card__wrap" ng-repeat="item in list track by $index">
+        <div class="card">
+
+          <div class="card__avatar-wrap">
+            <img class="card__avatar" src={{item.avatar}} alt="{{item.name}} {{item.surName}}" >
+          </div>
+
+          <div class="card__name">
+              {{item.name}} {{item.surName}}
+          </div>
+
+          <div class="card__btns">
+            <div class="btn-del" ng-click="delStudents(list.indexOf(item))">
+              <span class="btn-del__item1"></span>
+              <span class="btn-del__item2"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

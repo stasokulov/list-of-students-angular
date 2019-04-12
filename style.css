@@ -1,0 +1,132 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+button {
+    margin: 5px;
+}
+
+.wrap {
+    width: 50%;
+    padding: 5px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    width: 100%;
+    min-width: 300px;
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card__wrap {
+    height: 110px;
+    margin: 0 0 5px 0;
+    position: relative;
+}
+
+.card__avatar-wrap {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.card__avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.card__name {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.card__btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 5px;
+    box-sizing: border-box;
+    height: 100px;
+}
+
+.btn-del,
+.btn-open {
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+.btn-del {
+    background-color: rgba(255, 0, 0, .5);
+}
+
+.btn-del__item1,
+.btn-del__item2 {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transition: .2s;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+}
+
+.btn-del__item1 {
+    transform: rotate(45deg);
+}
+
+.btn-del__item2 {
+    transform: rotate(-45deg);
+}
+
+.btn-del:hover .btn-del__item1 {
+    transform: rotate(135deg);
+}
+
+.btn-del:hover .btn-del__item2 {
+    transform: rotate(45deg);
+}
+
+.btn-open {
+    transform: rotate(90deg);
+    background-color: rgba(100, 100, 100, .5);
+}
+
+.btn-open__item1,
+.btn-open__item2 {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .2s;
+    height: 2px;
+    width: 50%;
+    background-color: black;
+}
+
+.btn-open__item1 {
+    transform: rotate(45deg) translate(-50%);
+}
+
+.btn-open__item2 {
+    transform: rotate(-45deg) translate(-50%);
+}
+
+.btn-open:hover .btn-open__item1,
+.btn-open:hover .btn-open__item2 {
+    left: 60%;
+}
+
