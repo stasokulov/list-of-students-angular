@@ -5,4 +5,4 @@
 
 Написано на AngularJS.
 
-Сайт: Простейшее приложение на AngularJS.
+Сайт: https://stasokulov.github.io/list-of-students-angular/
